@@ -6,11 +6,11 @@ import AddressForm from "./components/AddressForm";
 import Address from "./models/Address";
 
 const address: Address = {
-    line1: "500 Volvo Pkwy",
+    line1: "111 Granby St",
     line2: "",
-    city: "Chesapeake",
+    city: "Norfolk",
     state: "VA",
-    zip: "23320",
+    zip: "23510",
     verified: true,
     sameMailingAddress: true,
     sameJanuaryAddress: false
