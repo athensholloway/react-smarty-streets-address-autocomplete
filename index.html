@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello React!</title>
+
+        <style>
+            .container {
+                margin-top: 60px;
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                overflow: visible;
+                white-space: nowrap
+            }
+            label {
+                width: 60px;
+                display: inline-block;
+            }
+            .same-address {
+                width: auto;
+            }
+            button,
+            .same-address > input {
+                margin-left: 60px;
+            }
+            form > div {
+                padding : 7px;
+                position: relative;
+            }
+
+            div.address-autocomplete {
+                border: 1px solid rgba(138,138,138,1);
+                background-color: white;
+                padding: 7px;
+                left: 65px;
+                position: absolute;
+                z-index: 1000;
+            }
+
+            div.address-autocomplete > div {
+                padding-top: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <!-- Dependencies -->
+        <script src="./node_modules/react/umd/react.development.js"></script>
+        <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+
+        <!-- Main -->
+        <script src="./dist/bundle.js"></script>
+        <script src="https://d79i1fxsrar4t.cloudfront.net/sdk/1.4.2/smartystreets-sdk-1.4.2.min.js"></script>
+    </body>
+</html>
