@@ -2,10 +2,18 @@ import SmartyStreetsSDK from 'smartystreets-javascript-sdk';
 import { SuggestedAddress } from "./AddressAutoComplete";
 const SmartyStreetsCore = SmartyStreetsSDK.core;
 const Lookup = SmartyStreetsSDK.usStreet.Lookup;
-const websiteKey = "5264417515644232";
+const websiteKey = "5264416744258484";
 const credentials = new SmartyStreetsCore.SharedCredentials(websiteKey);
 const client = SmartyStreetsCore.buildClient.usStreet(credentials);
 
+export enum AddressStatus {
+    ServiceUnavailable = 1,
+    Invalid = 2,
+    NotAMailingAddress = 3,
+    VerifiedExactMatch = 4,
+    VerifiedWithChanges = 5
+
+}
 export interface VerifiedAddress {
     text: string, 
     streetLine: string, 

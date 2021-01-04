@@ -8,7 +8,11 @@ module.exports = {
     rules: [
       {
         test: /\.(jsx|js|ts|tsx)$/,
-        exclude: /(node_modules|bower_components)/,
+        include: [
+          path.join(__dirname, "src/"),
+          path.join(__dirname, "node_modules/smartystreets-javascript-sdk"),
+        ],
+        exclude: /node_modules\/(?!smartystreets\-javascript\-sdk)/,
         use: 'babel-loader',
       },
     ],
@@ -19,6 +23,8 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    library: "spike",
+    libraryTarget: "umd" 
   },
   plugins: [
     new HtmlWebPackPlugin({

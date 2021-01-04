@@ -2,7 +2,7 @@ import SmartyStreetsSDK from 'smartystreets-javascript-sdk';
 
 const SmartyStreetsCore = SmartyStreetsSDK.core;
 const Lookup = SmartyStreetsSDK.usAutocomplete.Lookup;
-const websiteKey = "5264417515644232";
+const websiteKey = "5264416744258484";
 const credentials = new SmartyStreetsCore.SharedCredentials(websiteKey);
 const client = SmartyStreetsCore.buildClient.usAutocomplete(credentials);
 
